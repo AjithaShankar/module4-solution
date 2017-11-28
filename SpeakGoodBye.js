@@ -11,22 +11,15 @@
 // var byeSpeaker =
 
 // DO NOT attach the speakWord variable to the 'byeSpeaker' object.
-(function () {
+var speakWord = "Good Bye";
 
-/* fill in parts of the 'for' loop to loop over names array
-  the var names ["Yakov".........]; is in the html file head section*/
-for (var i = 0; i < names.length; i++) {
-var firstLetter = names[i].charAt(0).toLowerCase();  // takes each name in the variable names and converts the first character to lower case e.g. Yokov to yokov.
-//STEP 12:
-  // Compare the 'firstLetter' retrieved in STEP 11 to lower case
-  // 'j'. If the same, call byeSpeaker's 'speak' method with the current name
-  // in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
-  // name in the loop.
- if (firstLetter === 'j') {
-    byeSpeaker.speak(names[i]);
-  } else {
-    helloSpeaker.speak(names[i]);
-  }
+// STEP 8: Rewrite the 'speak' function such that it is attached to the
+// byeSpeaker object instead of being a standalone function.
+// See Lecture 52, part 2
+function speak(name) {
+  console.log(speakWord + " " + name);
 }
 
-})();
+// STEP 9: Expose the 'byeSpeaker' object to the global scope. Name it
+// 'byeSpeaker' on the global scope as well.
+// xxxx.xxxx = byeSpeaker;
